@@ -1,0 +1,439 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>
+
+    02 - Spring vs Spring Boot : Lab Exercise
+
+    </title>
+    <link rel="shortcut icon" href="https://contentlive.s3.amazonaws.com/28066/public/favicon.ico?r=29" /><link href="https://static1.litmos.com/static/css/bootstrap.css?v=2018.12.14" rel="stylesheet" type="text/css" /><link href="https://static1.litmos.com/static/css/bootstrap-treeview.min.css?v=2018.12.14" rel="stylesheet" type="text/css" /><link href="https://static1.litmos.com/static/css/bootstrap-theme.css?v=2018.12.14" rel="stylesheet" type="text/css" /><link href="/static/css/font-awesome.min.css?v=2018.12.14" rel="stylesheet" type="text/css" />
+    <link href="/theme.ashx?Id=119565&amp;R=29&amp;S=2018.12.14&amp;orgId=28066" rel="stylesheet" type="text/css" />
+    <link href="https://static1.litmos.com/static/css/fullscreen_module.css?v=2018.12.14" rel="stylesheet" type="text/css" />
+      <script type="text/javascript" src="https://static1.litmos.com/static/js/jquery-1.10.2.min.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/jquery.counter.min.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/jquery.scrollTo-min.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/jquery.bgiframe.min.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/jquery.raty.min.js?v=2018.12.14"></script>
+    <script type="text/javascript" src="https://static1.litmos.com/static/js/bootstrap.js?v=2018.12.14"></script>
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <!-- LNAME: c7ee01b3-2853-41ac-9299-468eb90f21d2 -->
+    <a href="#wrapper" class="skip">Skip navigation</a>
+
+<!-- LNAME: 3a02132d-409f-4a6b-9e88-e5e661e145f3 -->
+
+<div id="coursePlayerWrapper">
+    <nav class="navbar navbar-default navbarBkg" id="coursePlayerHeader">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+    			<a href="#menu-toggle" class="btn-nav hidden-xs" id="menu-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <!-- MOBILE EXIT BTN-->
+
+                <a href="https://pivotal.litmos.com/course/482074/module/1999032/exit?LPId=0" id="module_Exit" class="pull-left m-nav-item hidden-sm hidden-md hidden-lg">
+                    <div class="m-nav-btn">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <h1 id="moduleName" class="topNavText hidden-sm hidden-md hidden-lg">02 - Spring vs Spring Boot : Lab Ex...</h1>
+                <h1 id="moduleName" class="topNavText hidden-xs">02 - Spring vs Spring Boot : Lab Exercise</h1>
+
+                <!-- MOBILE NEXT BTN-->
+
+                <a id="module_Next" href="https://pivotal.litmos.com/course/482074/module/1999032/next?LPId=0"  class="m-nav-item hidden-sm hidden-md hidden-lg pull-right">
+                    <div class="m-nav-btn">
+                        <i class="fa fa-fast-forward" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+
+                <!-- DESKTOP BTNS-->
+                <div class="moduleBtnBox hidden-xs">
+
+                    <a href="https://pivotal.litmos.com/course/482074/module/1999032/exit?LPId=0" id="module_Exit" class="m-nav-item pull-right">
+                        <div class="m-nav-btn">
+                            <i class="fa fa-close" aria-hidden="true"></i> Exit
+                        </div>
+                    </a>
+
+
+                    <a id="module_Next" href="https://pivotal.litmos.com/course/482074/module/1999032/next?LPId=0"  class="m-nav-item pull-right">
+                        <div class="m-nav-btn">
+                            <i class="fa fa-fast-forward" aria-hidden="true"></i>&nbsp;Next module
+                        </div>
+                    </a>
+
+
+                    <a data-toggle="modal" href="#myModal" id="module_Feedback" class="m-nav-item pull-right hidden-xs">
+                        <div class="m-nav-btn">
+                            <i class="fa fa-comment" aria-hidden="true"></i> Feedback
+                        </div>
+                    </a>
+
+                </div>
+    		</div>
+  		</div>
+	</nav>
+</div>
+<!-- Sidebar -->
+
+<!-- Sidebar -->
+<!-- LNAME: 80c25856-0441-4b3c-bb52-a908ff09e62c -->
+<div id="sidebar-wrapper" class="navbarBkg">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#1a" data-toggle="tab" title="Modules"><i class="fa fa-angle-double-down"
+                aria-hidden="true"></i></a></li>
+            <li><a href="#2a" onclick="Sidebar.loadDocs();" data-toggle="tab" title="Additional References"><i class="fa fa-files-o"
+                aria-hidden="true"></i></a></li>
+            <li id="m_discussion" style="display: none"><a href="#3a" onclick="Sidebar.loadDiscussion();"
+                data-toggle="tab" title="Discuss"><i class="fa fa-comments-o" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="tab-content clearfix">
+            <!-- Module List -->
+            <div class="tab-pane active" id="1a">
+                <div id="contentMenu">
+                    <i class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #ccc"></i>
+                </div>
+            </div>
+            <!-- Additional References -->
+            <div class="tab-pane" id="2a">
+                <div id="contentDocs">
+                    <i class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #ccc"></i>
+                </div>
+            </div>
+            <div class="tab-pane" id="3a">
+                <div style="padding: 10px;">
+                    <textarea class="form-control" rows="1" id="txtNewThread" style="resize: none;" placeholder="Join the discussion..."></textarea>
+                    <div class="discuss_submit">
+                        <div class="pull-left text-muted">
+                            Note: Your post will be visible to all members of this discussion board.
+                        </div>
+                        <button class="btn btn-success" type="button" onclick="AddDiscussionThread()" style="width: 100px;">
+                            Post
+                        </button>
+                    </div>
+                </div>
+                <div id="mainDiscussion">
+                    <i class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #ccc"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->
+<script type="text/javascript">
+
+    var currentThreadPage = 20;
+    var DISCUSSION_URI = '/discussions/Discuss?typeId=482074&isLearningPath=False&moduleId=1999032';
+    var ADDTHREAD_URI = '/discussions/AddThread?typeId=482074&isLearningPath=False';
+    var ADDREPLY_URI = '/discussions/AddReply?typeId=482074&isLearningPath=False';
+    var GETREPLY_URI = '/discussions/GetReply?typeId=482074&isLearningPath=False';
+    var DELETETHREAD_URI = '/discussions/DeleteThread?typeId=482074&isLearningPath=False';
+    var DELETEREPLY_URI = '/discussions/DeleteReply?typeId=482074&isLearningPath=False';
+
+
+    var MENU_URI = '/course/482074/module/1999032/ModuleSidebarMenu?LPId=0&httpMode=https&scormMenu=False';
+    var DOCS_URI = '/course/482074/module/1999032/ModuleSidebarDocs?LPId=0&httpMode=https';
+
+    var Sidebar = {
+
+        courseJson: { courseId: 482074 },
+        discussionEnabled: false,
+
+        menuLoaded: false,
+        docsLoaded: false,
+
+        init: function () {
+
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+
+                if (Sidebar.menuLoaded == false) {
+                    Sidebar.loadMenu();
+                }
+
+                $("#wrapper").toggleClass("toggled");
+                $("#sidebar-wrapper").toggleClass("toggled");
+                //                if ($('#sidebar-wrapper').width() == 0) {
+                //                    $('#sidebar-wrapper').width('350');
+                //                    if (typeof scormPlayer != "undefined") {
+                //                        scormPlayer.showCourseMenu();
+                //                    }
+
+                //                } else {
+                //                    $('#sidebar-wrapper').width('0');
+                //                    if (typeof scormPlayer != "undefined") {
+                //                        scormPlayer.hideCourseMenu();
+                //                    }
+                //                }
+            });
+        },
+
+        loadMenu: function () {
+            if (!Sidebar.menuLoaded) {
+                Sidebar.menuLoaded = true;
+                $.ajax({
+                    type: 'GET',
+                    url: MENU_URI,
+                    data: Sidebar.courseJson,
+                    success: function (data) {
+                        $("#contentMenu").html(data);
+                        Sidebar.highlightMenuItem();
+                        // Sidebar.checkDiscussion();
+                    }
+                });
+            }
+        },
+
+        loadDocs: function () {
+            if (!Sidebar.docsLoaded) {
+                Sidebar.docsLoaded = true;
+                $.ajax({
+                    type: 'GET',
+                    url: DOCS_URI,
+                    data: Sidebar.courseJson,
+                    success: function (data) {
+                        $("#contentDocs").html(data);
+                    }
+                });
+            }
+        },
+
+        loadDiscussion: function () {
+            if (!Sidebar.discussionLoaded) {
+                Sidebar.discussionLoaded = true;
+                $.ajax({
+                    type: 'GET',
+                    url: DISCUSSION_URI,
+                    data: Sidebar.courseJson,
+                    success: function (data) {
+                        $("#mainDiscussion").html(data);
+                    },
+                    error: function (e) {
+                        alert("Error loading content");
+                        e.preventDefault();
+                        Sidebar.discussionLoaded = false;
+                    }
+                });
+            }
+        },
+
+        highlightMenuItem: function () {
+            var moduleName = $('#moduleName').text();
+            $(".sidebarText > a").each(function () {
+                if ($(this).text() == moduleName) {
+                    $(this).addClass("activeModuleColor");
+                }
+            });
+        },
+
+        checkDiscussion: function () {
+            if (Sidebar.discussionEnabled) {
+                $("#m_discussion").show();
+            }
+        }
+    };
+
+
+    $(document).ready(function (index) {
+
+        Sidebar.init();
+    });
+
+
+</script>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close" tabindex="2">
+                    &times;</button>
+                <h4 class="modal-title" id="myModalLabel" tabindex="1">
+                    <span class="litmosHeader" style="color:#ffffff">
+                        Send feedback to the course administrator</span></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" name="feedback" id="feedback" method="post" action="">
+                <div class="control-group">
+                    <label for="mfeedbacksubject">
+                        Subject:</label>
+                    <input type="text" class="form-control" name="mfeedbacksubject" id="mfeedbacksubject" tabindex="3"/>
+                </div>
+                <div class="control-group">
+                    <label for="mfeedbackbox">
+                        Message:</label>
+                    <textarea class="form-control" rows="5" cols="" name="mfeedbackbox" id="mfeedbackbox" tabindex="4" ></textarea>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" onclick="Utils.sendModalFeedback()" data-dismiss="modal" tabindex="5">
+                    Send</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" tabindex="6">
+                    Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id='customLitmosScript'></div>
+
+
+    <div id="wrapper">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="content">
+
+                        <iframe width="100%" id="iFrameRapper" src="https://content.enablement.pivotal.io/spring-boot-developer/unit/spring-vs-spring-boot/index.html"
+                        class="column" scrolling="auto" frameborder="0"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+
+
+
+
+    <form id="XssForm" action="#">
+        <input name="__RequestVerificationToken" type="hidden" value="tfV-FXKgVzr3qWXM_V8x1-2wMU1uEl9Z9O1ohQyWDDM-AAjkbRlZzxtt_gI13SuR65yfdudz0nCikjYv4ISwXu9Y7bUoLrEyEBmLOye4dgz1ot2mNOT6K6ejDq2wUECJcf799bGlsfw71V6BI0ukBw2" />
+    </form>
+    <script type="text/javascript" src="https://static1.litmos.com/static/js/util/utils.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/util/facebox.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/util/date.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/util/timer.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/util/validation.js?v=2018.12.14"></script><script type="text/javascript" src="https://static1.litmos.com/static/js/swfobject.js?v=2018.12.14"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Utils.initAjax('/account/login');
+            $('html').css('min-height', '100vh');
+
+            function resize() {
+                var t = $(window).scrollTop();
+                var bh = $(window).height();
+                var tb = $("#coursePlayerWrapper").height();
+                if (t < 0) {
+                    t = 0;
+                }
+                if (tb < 0) {
+                    tb = 60;
+                }
+
+                var h = (bh - t) - tb;
+
+                $('#sidebar-wrapper').height(h);
+                $('#wrapper').height(h);
+            }
+
+            resize();
+
+            $(window).resize(function () {
+                resize();
+            });
+
+            // bind a click event to the 'skip' link
+            $(".skip").click(function (event) {
+
+                // the content we're skipping to
+                var skipTo = "#wrapper" + this.href.split('#wrapper')[1];
+
+                // Setting 'tabindex' to -1 takes an element out of normal
+                // tab flow but allows it to be focused via javascript
+                $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+
+                    // when focus leaves this element,
+                    // remove the tabindex attribute
+                    $(this).removeAttr('tabindex');
+
+                }).focus(); // focus on the content container
+            });
+        });
+    </script>
+
+
+ <!-- LNAME: 1ec62292-cc8e-4a80-8a83-e46fa30fefdb -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            Utils.feedbackUri = '/course/482074/module/1999032/feedback';
+        });
+    </script>
+
+
+        <!-- LNAME: 7eaf70d6-f3de-4c73-8746-927c33b3366f -->
+<div style="display: none;" id="timer">
+            <span class="time-tip">Time:</span>
+            <span class="time-count"></span>
+        </div>
+        <div style="display: none;" class="module-star-rating"><div id="rating"></div></div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var enableOnunloadTimer = true;
+            LitmosModuleTimer.timerUri = '/course/482074/module/1999032/timer';
+            LitmosModuleTimer.showTimer = false;
+            var disableTimer = true;
+            LitmosModuleTimer.onCloseUpdateTimer = true;
+            if (!disableTimer) {
+                LitmosModuleTimer.init();
+            }
+            $("#module_exit").click(function () {
+                 enableOnunloadTimer = false;
+            });
+            $("#module_next").click(function () {
+                 enableOnunloadTimer = false;
+            });
+            window.onbeforeunload = function() {
+                if ( !disableTimer && enableOnunloadTimer && LitmosModuleTimer.onCloseUpdateTimer && LitmosModuleTimer.timerUri != null) {
+                    $.ajax({
+                        url: LitmosModuleTimer.timerUri,
+                        type: "POST",
+                        data: { empty: true, rating: null },
+                    });
+                }
+            };
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+            $('#iframeAlternate').hide();
+            function resizeWindow() {
+                var height = $(window).height();
+                var offset = $("#coursePlayerHeader").height();
+                $("#iFrameRapper").height(height - 150);
+            };
+            var resizeTimer = null;
+            $(window).bind("resize", function () {
+                if (resizeTimer) clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(resizeWindow, 100);
+            });
+            resizeWindow();
+        });
+
+
+    </script>
+
+</body>
+</html>
